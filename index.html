@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+        <div class='container'>
+            <div class='heading'><h1>TIC TAC TOE</h1></div>
+            <div>
+                <input class='mat' type='button' onclick="put(0,0)" id='m00'></input>
+                <input class='mat' type='button' onclick="put(0,1)" id='m01'></input>
+                <input class='mat' type='button' onclick="put(0,2)" id='m02'></input>
+            </div>
+            <div>
+                <input class='mat' type='button' onclick="put(1,0)" id='m10'></input>
+                <input class='mat' type='button' onclick="put(1,1)" id='m11'></input>
+                <input class='mat' type='button' onclick="put(1,2)" id='m12'></input>
+            </div>
+            <div>
+                <input class='mat' type='button' onclick="put(2,0)" id='m20'></input>
+                <input class='mat' type='button' onclick="put(2,1)" id='m21'></input>
+                <input class='mat' type='button' onclick="put(2,2)" id='m22'></input>
+            </div>
+            <div id="result"></div>
+            <div >
+                <button class="replay" onclick="location.reload()"><i class="fa-solid fa-rotate-right fa-2xl"></i></button>
+            </div>
+        </div>
+</body>
+<script src="./script.js"></script>
+</html>
