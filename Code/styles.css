@@ -9,10 +9,16 @@
 {
     font-family: 'Poppins', sans-serif;
 }
+.turn
+{
+    margin-bottom: 20px;
+    font-size: 25px;
+}
 .heading
 {
     font-size: 30px;
     /* z-index: 2; */
+    margin-bottom: -30px;
 }
 .container
 {
@@ -24,7 +30,7 @@
 }
 #result
 {
-    font-size: 20px;
+    font-size: 28.5px;
 }
 h2
 {
@@ -59,8 +65,17 @@ h2
     border-radius: 3px;
     border: none;
 }
+.replay:hover
+{
+    cursor: pointer;
+}
 body
 {
     background-color: #54BAB9;
     color: #1D5D9B;
 }
+@media only screen and (max-width: 600px) {
+    .heading{
+        font-size: 22px;
+    }
+  }

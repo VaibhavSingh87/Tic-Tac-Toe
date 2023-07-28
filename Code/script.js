@@ -1,26 +1,28 @@
 var grid=[[-1,-1,-1],[-1,-1,-1],[-1,-1,-1]];
     var chance=true;
+        document.getElementById("chance").innerText="Player 1's turn";
+    var finished=false;
     function put(x,y)
     {
         var s="m"+x+y;
-        if(chance)
+        if(chance && !finished)
         {
+            document.getElementById("chance").innerText="Player 2's turn";
             if(grid[x][y]===-1)
             {   
                 grid[x][y]=1;
                 document.getElementById(s).value="X";
-                console.log("Clicked1");
                 chance=false;
             }
         }
         else
-        if(!chance)
+        if(!chance && !finished)
         {
+            document.getElementById("chance").innerText="Player 1's turn";
             if(grid[x][y]===-1)
             {
                 grid[x][y]=0;
                 document.getElementById(s).value="O";
-                console.log("Clicked2");
                 chance=true;
             }
         }
@@ -28,16 +30,22 @@ var grid=[[-1,-1,-1],[-1,-1,-1],[-1,-1,-1]];
         if(res === 1)
         {
             document.getElementById("result").innerHTML="<h2>Player 1 Wins!</h2>";
+            finished=true;
+            document.getElementById("chance").remove();
         }
         else
         if(res === 2)
         {
             document.getElementById("result").innerHTML="<h2>Player 2 Wins!</h2>";
+            finished=true;
+            document.getElementById("chance").remove();
         }
         else
         if(res === 0)
         {
             document.getElementById("result").innerHTML="<h2>Its a DRAW!</h2>";
+            finished=true;
+            document.getElementById("chance").remove();
         }
     }
     function checkWin(mat)
